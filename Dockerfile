@@ -1,7 +1,6 @@
 FROM intel4coro/jupyter-ros2:jazzy-py3.12
 
 USER ${NB_USER}
-USER root
 # Setup up a ROS workspace
 ENV ROS_WS=${HOME}/workspace/ros
 RUN mkdir -p ${ROS_WS}/src
@@ -26,10 +25,11 @@ RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
 RUN source /opt/ros/jazzy/setup.bash
-RUN chmod 777 -R .
 RUN pip install -U pip && pip install -U setuptools
+USER root
 RUN colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
+USER ${NB_USER}
 
 # # Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
