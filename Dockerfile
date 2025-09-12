@@ -24,12 +24,22 @@ RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
-RUN source /opt/ros/jazzy/setup.bash
-RUN pip install -U pip && pip install -U setuptools
-USER root
-RUN colcon build --symlink-install --parallel-workers 4
-RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
-USER ${NB_USER}
+# Install Python build tooling
+RUN pip install -U pip setuptools
+
+# Install system dependencies for the workspace
+# (rosdep needs ROS env; keep everything in one layer)
+RUN source /opt/ros/jazzy/setup.bash \
+ && rosdep update \
+ && rosdep install --rosdistro jazzy --from-paths src --ignore-src -y
+
+# Build (source + colcon in the SAME layer!)
+RUN source /opt/ros/jazzy/setup.bash \
+ && colcon build --symlink-install --parallel-workers 4
+
+# Convenience for interactive shells
+RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc \
+ && echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 
 # # Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
