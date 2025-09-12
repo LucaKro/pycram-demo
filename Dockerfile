@@ -19,8 +19,9 @@ RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
-RUN source /opt/ros/jazzy/setup.bash && \
-    colcon build --symlink-install --parallel-workers 4
+RUN source /opt/ros/jazzy/setup.bash
+pip install -U pip && RUN pip install -U setuptools
+RUN colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 
 # # Install Python dependencies
