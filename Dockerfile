@@ -34,7 +34,7 @@ RUN source /opt/ros/jazzy/setup.bash \
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc \
  && echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 USER root
-RUN apt install pygraphviz pygraphviz-dev -y
+RUN apt install graphviz graphviz-dev -y
 USER ${NB_USER}
 
 RUN pip install -e semantic_world
