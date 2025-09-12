@@ -1,6 +1,7 @@
 FROM intel4coro/jupyter-ros2:jazzy-py3.12
 
 USER ${NB_USER}
+USER root
 # Setup up a ROS workspace
 ENV ROS_WS=${HOME}/workspace/ros
 RUN mkdir -p ${ROS_WS}/src
