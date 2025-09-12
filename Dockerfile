@@ -28,7 +28,7 @@ WORKDIR ${ROS_WS}
 # Build (source + colcon in the SAME layer!)
 RUN source /opt/ros/jazzy/setup.bash \
  && pip install -U pip setuptools \
- && colcon build --symlink-install --parallel-workers 4
+ && colcon build --parallel-workers 4
 
 # Convenience for interactive shells
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc \
