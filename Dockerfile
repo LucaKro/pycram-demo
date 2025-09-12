@@ -37,10 +37,12 @@ USER root
 RUN apt install graphviz graphviz-dev -y
 USER ${NB_USER}
 
-RUN pip install -e semantic_world
 
 # # Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
+RUN pip install -r requirements.txt && pip install -e .
+
+WORKDIR ${ROS_WS}/src/semantic_world
 RUN pip install -r requirements.txt && pip install -e .
 
 # Steps copy from github CI
