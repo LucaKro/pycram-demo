@@ -33,10 +33,15 @@ RUN source /opt/ros/jazzy/setup.bash \
 # Convenience for interactive shells
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc \
  && echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
+USER root
+RUN apt install pygraphviz pygraphviz-dev -y
+USER ${NB_USER}
+
+pip install -e semantic_world
 
 # # Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && pip install -e .
 
 # Steps copy from github CI
 RUN pip install jupytext treon
