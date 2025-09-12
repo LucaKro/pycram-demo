@@ -10,8 +10,6 @@ WORKDIR ${ROS_WS}/src
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt install python3.12-venv ros-jazzy-xacro python3-vcstool git ros-dev-tools default-jre graphviz graphviz-dev -y
-
 RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall
 RUN touch ros2_robotiq_gripper/robotiq_controllers/COLCON_IGNORE
 RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
