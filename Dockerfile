@@ -25,6 +25,7 @@ RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
 RUN source /opt/ros/jazzy/setup.bash
+RUN chmod 777 -R .
 RUN pip install -U pip && pip install -U setuptools
 RUN colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
