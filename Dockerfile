@@ -17,8 +17,9 @@ RUN vcs import --input https://raw.githubusercontent.com/cram2/pycram/dev/rosins
 
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
-RUN source /opt/ros/jazzy/setup.bash && \
-    colcon build --symlink-install --parallel-workers 4
+RUN source /opt/ros/jazzy/setup.bash
+RUN pip install -U pip && pip install -U setuptools
+RUN colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 
 # # Install Python dependencies
