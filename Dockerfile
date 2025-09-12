@@ -24,11 +24,10 @@ RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 
 # # Building ROS workspace
 WORKDIR ${ROS_WS}
-# Install Python build tooling
-RUN pip install -U pip setuptools
 
 # Build (source + colcon in the SAME layer!)
 RUN source /opt/ros/jazzy/setup.bash \
+ && pip install -U pip setuptools \
  && colcon build --symlink-install --parallel-workers 4
 
 # Convenience for interactive shells
