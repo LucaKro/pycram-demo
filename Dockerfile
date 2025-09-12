@@ -27,12 +27,6 @@ WORKDIR ${ROS_WS}
 # Install Python build tooling
 RUN pip install -U pip setuptools
 
-# Install system dependencies for the workspace
-# (rosdep needs ROS env; keep everything in one layer)
-RUN source /opt/ros/jazzy/setup.bash \
- && rosdep update \
- && rosdep install --rosdistro jazzy --from-paths src --ignore-src -y
-
 # Build (source + colcon in the SAME layer!)
 RUN source /opt/ros/jazzy/setup.bash \
  && colcon build --symlink-install --parallel-workers 4
