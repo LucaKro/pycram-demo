@@ -37,7 +37,7 @@ USER root
 RUN apt install pygraphviz pygraphviz-dev -y
 USER ${NB_USER}
 
-pip install -e semantic_world
+RUN pip install -e semantic_world
 
 # # Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
