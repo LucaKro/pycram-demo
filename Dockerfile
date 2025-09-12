@@ -7,8 +7,10 @@ RUN mkdir -p ${ROS_WS}/src
 
 # Clone pycram and its dependencies repos
 WORKDIR ${ROS_WS}/src
-RUN vcs import --input https://raw.githubusercontent.com/cram2/pycram/dev/rosinstall/pycram-ros2-https.rosinstall
-
+RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall
+RUN touch ros2_robotiq_gripper/robotiq_controllers/COLCON_IGNORE
+RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
+RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 # # init submodule repo with ssh url in .gitmodules
 # RUN  cd ${ROS_WS}/src/pycram \
 #   && perl -i -p -e 's|git@(.*?):|https://\1/|g' .gitmodules \
