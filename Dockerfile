@@ -37,13 +37,8 @@ USER root
 RUN apt install graphviz graphviz-dev -y
 USER ${NB_USER}
 
-
-# # Install Python dependencies
-WORKDIR ${ROS_WS}/src/pycram
-RUN pip install -r requirements.txt && pip install -e .
-
-WORKDIR ${ROS_WS}/src/semantic_world
-RUN pip install -r requirements.txt && pip install -e .
+WORKDIR ${ROS_WS}/src/
+RUN pip install -r semantic_world/requirements.txt && pip install -e semantic_world && pip install -r pycram/requirements.txt && pip install -e pycram
 
 # Steps copy from github CI
 RUN pip install jupytext treon
