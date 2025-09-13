@@ -34,7 +34,7 @@ RUN source /opt/ros/jazzy/setup.bash \
 RUN echo "source /opt/ros/jazzy/setup.bash" >> ${HOME}/.bashrc \
  && echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 USER root
-RUN apt install graphviz graphviz-dev -y
+RUN apt install graphviz graphviz-dev -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 USER ${NB_USER}
 
 WORKDIR ${ROS_WS}/src/
