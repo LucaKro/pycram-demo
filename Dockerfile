@@ -16,6 +16,7 @@ RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
 RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_ur/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
+RUN cd pycram && git pull && cd ../semantic_world && git pull
 # # init submodule repo with ssh url in .gitmodules
 # RUN  cd ${ROS_WS}/src/pycram \
 #   && perl -i -p -e 's|git@(.*?):|https://\1/|g' .gitmodules \
