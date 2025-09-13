@@ -8,8 +8,6 @@ import subprocess
 import threading
 from time import sleep
 from IPython import get_ipython
-from pycram.datastructures.enums import WorldMode
-from pycram.ros_utils.viz_marker_publisher import VizMarkerPublisher
 
 # Display remote desktop on sidecar tab
 def display_desktop():
@@ -71,13 +69,10 @@ def launch_rviz(config='pycram.rviz'):
 def _init_visual_tools(result):
     if result.error_in_exec is not None:
         return
-    if "BulletWorld" in result.info.raw_cell and world is not None:
-        display_desktop()
-        sleep(3)
-        if world.mode == WorldMode.DIRECT:
-            viz_marker_publisher = VizMarkerPublisher()
-            launch_rviz()
-        ip.events.unregister('post_run_cell', _init_visual_tools)
+    display_desktop()
+    sleep(3)
+    launch_rviz()
+    ip.events.unregister('post_run_cell', _init_visual_tools)
 
 ip = get_ipython()
 if ip:
