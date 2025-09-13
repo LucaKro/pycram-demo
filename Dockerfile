@@ -62,4 +62,7 @@ RUN ipython profile create && \
 COPY --chown=${NB_USER}:users entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+WORKDIR ${ROS_WS}/src/
+RUN pip install -e pycram
+WORKDIR ${ROS_WS}/src/pycram/demos/laboratory_demo/
 USER ${NB_USER}
