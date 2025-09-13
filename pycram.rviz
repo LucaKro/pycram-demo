@@ -7,7 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
       Splitter Ratio: 0.5
-    Tree Height: 623
+    Tree Height: 616
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -51,16 +51,284 @@ Visualization Manager:
       Enabled: true
       Name: MarkerArray
       Namespaces:
-        cereal: true
-        kitchen: true
-        milk: true
-        pr2: true
+        Incubator_body_NakedSingularity: true
+        Incubator_door_NakedSingularity_glass_0: true
+        Incubator_door_NakedSingularity_handle: true
+        camera_link: true
+        camera_pole: true
+        left_base_link_inertia: true
+        left_forearm_link: true
+        left_robotiq_85_base_link: true
+        left_robotiq_85_left_finger_link: true
+        left_robotiq_85_left_finger_tip_link: true
+        left_robotiq_85_left_inner_knuckle_link: true
+        left_robotiq_85_left_knuckle_link: true
+        left_robotiq_85_right_finger_link: true
+        left_robotiq_85_right_finger_tip_link: true
+        left_robotiq_85_right_inner_knuckle_link: true
+        left_robotiq_85_right_knuckle_link: true
+        left_shoulder_link: true
+        left_upper_arm_link: true
+        left_wrist_1_link: true
+        left_wrist_2_link: true
+        left_wrist_3_link: true
+        pCube100_blinn2_0: true
+        pCube100_lambert1_0: true
+        pCube125_lambert1_0: true
+        pCube126_lambert1_0: true
+        pCube127_lambert1_0: true
+        pCube128_lambert1_0: true
+        pCube129_lambert1_0: true
+        pCube136_lambert1_0: true
+        pCube136_lambert1_0_001: true
+        pCube137_lambert1_0: true
+        pCube137_lambert1_0_001: true
+        pCube138_lambert1_0: true
+        pCube138_lambert1_0_001: true
+        pCube139_lambert1_0: true
+        pCube139_lambert1_0_001: true
+        pCube145_lambert1_0: true
+        pCube145_lambert1_0_001: true
+        pCube47_lambert1_0: true
+        pCube48_lambert1_0: true
+        pCube48_lambert1_0_001: true
+        pCube49_lambert1_0: true
+        pCube49_lambert1_0_001: true
+        pCube50_lambert1_0: true
+        pCube51_lambert1_0: true
+        pCube51_lambert1_0_001: true
+        pCube52_lambert1_0: true
+        pCube52_lambert1_0_001: true
+        pCube53_lambert1_0: true
+        pCube53_lambert1_0_001: true
+        pCube54_lambert1_0: true
+        pCube55_lambert1_0: true
+        pCube55_lambert1_0_001: true
+        pCube56_lambert1_0: true
+        pCube58_lambert1_0: true
+        pCube58_lambert1_0_001: true
+        pCube59_lambert1_0: true
+        pCube61_lambert1_0: true
+        pCube61_lambert1_0_001: true
+        pCube82_lambert1_0: true
+        pCube98_blinn2_0: true
+        pCube98_lambert1_0: true
+        pCylinder135_blinn3_0: true
+        pCylinder136_blinn3_0: true
+        pCylinder144_lambert1_0: true
+        pCylinder166_lambert1_0: true
+        pCylinder166_lambert1_0_001: true
+        pCylinder167_lambert1_0: true
+        pCylinder167_lambert1_0_001: true
+        pCylinder169_lambert1_0: true
+        pCylinder169_lambert1_0_001: true
+        pCylinder170_lambert1_0: true
+        pCylinder170_lambert1_0_001: true
+        pCylinder171_lambert1_0: true
+        pCylinder171_lambert1_0_001: true
+        pCylinder172_lambert1_0: true
+        pCylinder172_lambert1_0_001: true
+        pCylinder173_lambert1_0: true
+        pCylinder173_lambert1_0_001: true
+        pCylinder174_lambert1_0: true
+        pCylinder174_lambert1_0_001: true
+        pCylinder175_lambert1_0: true
+        pCylinder175_lambert1_0_001: true
+        pCylinder176_lambert1_0: true
+        pCylinder176_lambert1_0_001: true
+        pCylinder177_lambert1_0: true
+        pCylinder177_lambert1_0_001: true
+        pCylinder225_blinn3_0: true
+        pPlane1_lambert1_0: true
+        pPlane23_lambert1_0: true
+        pPlane24_lambert1_0: true
+        pPlane26_lambert1_0: true
+        pasted__polySurface17_pasted__blinn1_0: true
+        pasted__polySurface17_pasted__blinn2_0: true
+        pasted__polySurface18_pasted__blinn1_0: true
+        pasted__polySurface18_pasted__blinn2_0: true
+        polySurface147_blinn1_0: true
+        polySurface149_lambert1_0: true
+        polySurface150_lambert1_0: true
+        polySurface158_lambert1_0: true
+        polySurface159_lambert1_0: true
+        polySurface160_lambert1_0: true
+        polySurface161_lambert1_0: true
+        polySurface162_lambert1_0: true
+        polySurface163_lambert1_0: true
+        polySurface165_lambert1_0: true
+        polySurface166_lambert1_0: true
+        polySurface167_lambert1_0: true
+        polySurface168_lambert1_0: true
+        polySurface169_lambert1_0: true
+        polySurface170_lambert1_0: true
+        polySurface171_lambert1_0: true
+        polySurface172_lambert1_0: true
+        polySurface173_lambert1_0: true
+        polySurface174_lambert1_0: true
+        polySurface175_lambert1_0: true
+        polySurface176_lambert1_0: true
+        polySurface177_lambert1_0: true
+        polySurface178_lambert1_0: true
+        polySurface179_lambert1_0: true
+        polySurface180_lambert1_0: true
+        polySurface181_lambert1_0: true
+        polySurface182_lambert1_0: true
+        polySurface183_lambert1_0: true
+        polySurface184_lambert1_0: true
+        polySurface185_lambert1_0: true
+        polySurface188_lambert1_0: true
+        polySurface189_lambert1_0: true
+        polySurface190_lambert1_0: true
+        polySurface191_lambert1_0: true
+        polySurface192_lambert1_0: true
+        polySurface193_lambert1_0: true
+        polySurface194_lambert1_0: true
+        polySurface195_lambert1_0: true
+        polySurface196_lambert1_0: true
+        polySurface197_lambert1_0: true
+        polySurface198_lambert1_0: true
+        polySurface199_lambert1_0: true
+        polySurface200_lambert1_0: true
+        polySurface201_lambert1_0: true
+        polySurface202_lambert1_0: true
+        polySurface203_lambert1_0: true
+        polySurface204_lambert1_0: true
+        polySurface205_lambert1_0: true
+        polySurface206_lambert1_0: true
+        polySurface207_lambert1_0: true
+        polySurface208_lambert1_0: true
+        polySurface209_lambert1_0: true
+        polySurface210_lambert1_0: true
+        polySurface212_lambert1_0: true
+        polySurface213_lambert1_0: true
+        polySurface214_lambert1_0: true
+        polySurface215_lambert1_0: true
+        polySurface216_lambert1_0: true
+        polySurface218_lambert1_0: true
+        polySurface219_lambert1_0: true
+        polySurface220_lambert1_0: true
+        polySurface222_lambert1_0: true
+        polySurface223_lambert1_0: true
+        polySurface224_lambert1_0: true
+        polySurface227_lambert1_0: true
+        polySurface229_lambert1_0: true
+        polySurface230_lambert1_0: true
+        polySurface231_lambert1_0: true
+        polySurface232_lambert1_0: true
+        polySurface233_lambert1_0: true
+        polySurface234_lambert1_0: true
+        polySurface235_lambert1_0: true
+        polySurface236_lambert1_0: true
+        polySurface237_lambert1_0: true
+        polySurface238_lambert1_0: true
+        polySurface239_lambert1_0: true
+        polySurface240_lambert1_0: true
+        polySurface241_lambert1_0: true
+        polySurface242_lambert1_0: true
+        polySurface243_lambert1_0: true
+        polySurface244_lambert1_0: true
+        polySurface246_lambert1_0: true
+        polySurface247_lambert1_0: true
+        polySurface248_lambert1_0: true
+        polySurface251_lambert1_0: true
+        polySurface252_lambert1_0: true
+        polySurface253_lambert1_0: true
+        polySurface254_lambert1_0: true
+        polySurface255_lambert1_0: true
+        polySurface256_lambert1_0: true
+        polySurface257_lambert1_0: true
+        polySurface258_lambert1_0: true
+        polySurface259_lambert1_0: true
+        polySurface260_lambert1_0: true
+        polySurface261_lambert1_0: true
+        polySurface262_lambert1_0: true
+        polySurface263_lambert1_0: true
+        polySurface264_lambert1_0: true
+        polySurface265_lambert1_0: true
+        polySurface266_lambert1_0: true
+        polySurface267_lambert1_0: true
+        polySurface268_lambert1_0: true
+        polySurface270_lambert1_0: true
+        polySurface271_lambert1_0: true
+        polySurface272_lambert1_0: true
+        polySurface273_lambert1_0: true
+        polySurface274_lambert1_0: true
+        polySurface275_lambert1_0: true
+        polySurface276_lambert1_0: true
+        polySurface277_lambert1_0: true
+        polySurface278_lambert1_0: true
+        polySurface279_lambert1_0: true
+        polySurface280_lambert1_0: true
+        polySurface281_lambert1_0: true
+        polySurface282_lambert1_0: true
+        polySurface283_lambert1_0: true
+        polySurface284_lambert1_0: true
+        polySurface284_lambert1_0_001: true
+        polySurface285_lambert1_0: true
+        polySurface285_lambert1_0_001: true
+        polySurface286_lambert1_0: true
+        polySurface286_lambert1_0_001: true
+        polySurface287_lambert1_0: true
+        polySurface287_lambert1_0_001: true
+        polySurface288_lambert1_0: true
+        polySurface288_lambert1_0_001: true
+        polySurface478_lambert1_0: true
+        polySurface478_lambert1_0_001: true
+        polySurface479_lambert1_0: true
+        polySurface479_lambert1_0_001: true
+        polySurface480_lambert1_0: true
+        polySurface480_lambert1_0_001: true
+        polySurface481_lambert1_0: true
+        polySurface481_lambert1_0_001: true
+        polySurface482_lambert1_0: true
+        polySurface482_lambert1_0_001: true
+        polySurface613_blinn3_0: true
+        polySurface613_lambert1_0: true
+        polySurface638_lambert1_0: true
+        polySurface639_lambert1_0: true
+        polySurface641_lambert1_0: true
+        polySurface642_lambert1_0: true
+        polySurface645_blinn3_0: true
+        polySurface646_blinn3_0: true
+        polySurface647_blinn3_0: true
+        polySurface653_lambert1_0: true
+        polySurface654_lambert1_0: true
+        polySurface656_lambert1_0: true
+        polySurface658_lambert1_0: true
+        polySurface659_lambert1_0: true
+        polySurface767_lambert1_0: true
+        polySurface768_lambert1_0: true
+        polySurface768_lambert1_0_001: true
+        polySurface780_lambert1_0: true
+        polySurface780_lambert1_0_001: true
+        polySurface792_lambert1_0: true
+        polySurface878_pasted__blinn5_0: true
+        pull_out_drobe_blinn1_0: true
+        right_base_link_inertia: true
+        right_forearm_link: true
+        right_robotiq_85_base_link: true
+        right_robotiq_85_left_finger_link: true
+        right_robotiq_85_left_finger_tip_link: true
+        right_robotiq_85_left_inner_knuckle_link: true
+        right_robotiq_85_left_knuckle_link: true
+        right_robotiq_85_right_finger_link: true
+        right_robotiq_85_right_finger_tip_link: true
+        right_robotiq_85_right_inner_knuckle_link: true
+        right_robotiq_85_right_knuckle_link: true
+        right_shoulder_link: true
+        right_upper_arm_link: true
+        right_wrist_1_link: true
+        right_wrist_2_link: true
+        right_wrist_3_link: true
+        table: true
+        tray: true
       Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /pycram/viz_marker
+        Value: /semworld/viz_marker
       Value: true
   Enabled: true
   Global Options:
@@ -108,33 +376,33 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 6.506893157958984
+      Distance: 3.9484550952911377
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.758651614189148
+        Y: 0.9640985131263733
+        Z: 0.4410334825515747
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9003978371620178
+      Pitch: 0.8803977966308594
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.920398712158203
+      Yaw: 5.545398712158203
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: true
-  Height: 914
+  Height: 907
   Hide Left Dock: true
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd000000040000000000000156000002f8fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003b000002f8000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000001d7fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000001d7000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000038b0000003efc0100000002fb0000000800540069006d006501000000000000038b0000025300fffffffb0000000800540069006d006501000000000000045000000000000000000000038b000002f800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd000000040000000000000156000002f1fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073020000014c000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003b000002f1000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000001d7fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000001d7000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000002d10000003efc0100000002fb0000000800540069006d00650100000000000002d10000025300fffffffb0000000800540069006d00650100000000000004500000000000000000000002d1000002f100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -143,6 +411,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: true
-  Width: 907
+  Width: 721
   X: 0
   Y: 27

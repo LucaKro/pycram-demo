@@ -38,7 +38,7 @@ RUN apt install graphviz graphviz-dev -y && apt-get clean && rm -rf /var/lib/apt
 USER ${NB_USER}
 
 WORKDIR ${ROS_WS}/src/
-RUN pip install -r semantic_world/requirements.txt && pip install -e semantic_world && pip install -r pycram/requirements.txt && pip install -e pycram
+RUN source /opt/ros/jazzy/setup.bash && pip install -r semantic_world/requirements.txt && pip install -e semantic_world && pip install -r pycram/requirements.txt && pip install -e pycram
 
 # Steps copy from github CI
 RUN pip install jupytext treon
@@ -62,7 +62,5 @@ RUN ipython profile create && \
 COPY --chown=${NB_USER}:users entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-WORKDIR ${ROS_WS}/src/
-RUN pip install -e pycram
 WORKDIR ${ROS_WS}/src/pycram/demos/laboratory_demo/
 USER ${NB_USER}
