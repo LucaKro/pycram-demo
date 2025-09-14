@@ -17,8 +17,6 @@ RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_ur/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 
-RUN cd semantic_world && git pull
-
 # Building ROS workspace
 WORKDIR ${ROS_WS}
 RUN cd src/pycram && git pull && cd ../.. && \
