@@ -67,8 +67,6 @@ def launch_rviz(config='pycram.rviz'):
 
 # Init visualization tools when running notebook on binderhub
 def _init_visual_tools(result):
-    # if result.error_in_exec is not None:
-    #     return
     display_desktop()
     sleep(3)
     launch_rviz()
