@@ -21,7 +21,7 @@ RUN cd semantic_world && git pull
 
 # Building ROS workspace
 WORKDIR ${ROS_WS}
-RUN cd src/pycram && git pull && cd .. && cd .. \
+RUN cd src/pycram && git pull && cd ../.. && \
     source /opt/ros/jazzy/setup.bash && \
     colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
