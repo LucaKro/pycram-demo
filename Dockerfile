@@ -16,13 +16,13 @@ RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
 RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_ur/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
-# run git pull while avoiding cache
-RUN cd pycram && git pull
-RUN echo $(date +%s) && cd semantic_world && git pull
+
+RUN cd semantic_world && git pull
 
 # Building ROS workspace
 WORKDIR ${ROS_WS}
-RUN source /opt/ros/jazzy/setup.bash && \
+RUN cd pycram && git pull && cd .. \
+    source /opt/ros/jazzy/setup.bash && \
     colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 
