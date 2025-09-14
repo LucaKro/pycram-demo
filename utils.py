@@ -72,8 +72,8 @@ def _init_visual_tools(result):
     display_desktop()
     sleep(3)
     launch_rviz()
-    ip.events.unregister('post_run_cell', _init_visual_tools)
+    ip.events.unregister('shell_initialized', _init_visual_tools)
 
 ip = get_ipython()
 if ip:
-    ip.events.register('post_run_cell', _init_visual_tools)
+    ip.events.register('shell_initialized', _init_visual_tools)
