@@ -18,7 +18,7 @@ RUN touch iai_tracy/iai_tracy_ur/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 # run git pull while avoiding cache
 RUN echo $(date +%s) && cd pycram && git pull
-RUN echo $(date +%s) && cd ../semantic_world && git pull
+RUN echo $(date +%s) && cd semantic_world && git pull
 
 # Building ROS workspace
 WORKDIR ${ROS_WS}
