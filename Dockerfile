@@ -25,7 +25,7 @@ RUN cd src/pycram && git pull && \
     colcon build --symlink-install --parallel-workers 4
 RUN echo "source ${ROS_WS}/install/setup.bash" >> ${HOME}/.bashrc
 
-# # Install Python dependencies
+# Install Python dependencies
 WORKDIR ${ROS_WS}/src/pycram
 RUN pip install -r requirements.txt
 
