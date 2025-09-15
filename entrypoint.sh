@@ -6,5 +6,6 @@ cd ${ROS_WS}
 cd src/semantic_world && git pull
 cd ${ROS_WS}
 cd src/pycram && git pull
+cd ${ROS_WS}/src/pycram/demos/laboratory_demo/
 
 exec "$@"
