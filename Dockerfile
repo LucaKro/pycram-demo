@@ -9,7 +9,7 @@ RUN pip install setuptools==68.1.2
 
 # Clone pycram and its dependencies repos
 WORKDIR ${ROS_WS}/src
-RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall
+RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall #
 
 RUN touch ros2_robotiq_gripper/robotiq_controllers/COLCON_IGNORE
 RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
@@ -17,8 +17,8 @@ RUN touch ros2_robotiq_gripper/robotiq_hardware_tests/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_ur/COLCON_IGNORE
 RUN touch iai_tracy/iai_tracy_bringup/COLCON_IGNORE
 # run git pull on pycram and semantic_world to get the latest changes. if needed invalidate cache, change the respecitve comment
-RUN cd pycram && git pull # invalidate comment
-RUN cd semantic_world && git pull # invalidate comment
+RUN cd pycram && git pull
+RUN cd semantic_world && git pull
 
 # Building ROS workspace
 WORKDIR ${ROS_WS}
