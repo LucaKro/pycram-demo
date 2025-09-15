@@ -9,7 +9,7 @@ RUN pip install setuptools==68.1.2
 
 # Clone pycram and its dependencies repos
 WORKDIR ${ROS_WS}/src
-RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall #
+RUN vcs import --input https://raw.githubusercontent.com/LucaKro/pycram/laboratory_demo/rosinstall/pycram-ros2-https.rosinstall
 
 RUN touch ros2_robotiq_gripper/robotiq_controllers/COLCON_IGNORE
 RUN touch ros2_robotiq_gripper/robotiq_driver/COLCON_IGNORE
